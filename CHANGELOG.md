@@ -1,3 +1,7 @@
+### 0.10.1
+
+Included timestamp in json logs
+
 ### 0.10.0
 
 Added support for proxy
