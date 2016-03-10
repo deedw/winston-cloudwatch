@@ -8,7 +8,7 @@ var CloudWatch = winston.transports.CloudWatch = function(options) {
   this.level = options.level || 'info';
 
   var customProps = ['logGroupName', 'logStreamName', 'awsAccessKeyId', 'awsSecretKey',
-        'awsRegion', 'proxyServer'];
+        'awsRegion', 'proxyServer', 'cloudwatchlogs'];
 
   winston.Transport.call(this, _.omit(options, customProps));
 

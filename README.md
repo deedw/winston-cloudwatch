@@ -47,10 +47,10 @@ This is the list of options you could pass as argument to `winston.add`:
  * level - defaults to `info`
  * logGroupName
  * logStreamName
- * cloudwatch - preconfigured cloudwatch object. Optional
- * awsAccessKeyId - ignored if cloudwatch object provided
- * awsSecretKey - ignored if cloudwatch object provided
- * awsRegion - ignored if cloudwatch object provided
+ * cloudwatchlogs - preconfigured CloudWatchLogs object. Optional
+ * awsAccessKeyId - ignored if cloudwatchlogs object provided
+ * awsSecretKey - ignored if cloudwatchlogs object provided
+ * awsRegion - ignored if cloudwatchlogs object provided
  * json - `boolean`, format the message as JSON. Defaults to true
  * timestamp - `boolean`, include timestamp in log entry. Defaults to true
  * proxyServer
