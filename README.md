@@ -1,18 +1,18 @@
-# winston-cloudwatch <br />
-[![Build Status](https://travis-ci.org/lazywithclass/winston-cloudwatch.svg?branch=master)](https://travis-ci.org/lazywithclass/winston-cloudwatch)<br />[![Dependency Status](https://david-dm.org/lazywithclass/winston-cloudwatch.svg)](https://david-dm.org/lazywithclass/winston-cloudwatch) [![dev dependencies](https://david-dm.org/lazywithclass/winston-cloudwatch/dev-status.svg)](https://david-dm.org/lazywithclass/winston-cloudwatch#info=devDependencies) [![peer dependencies](https://david-dm.org/lazywithclass/winston-cloudwatch/peer-status.svg)](https://david-dm.org/lazywithclass/winston-cloudwatch#info=peerDependencies)
-==================
+# winston-cloudwatch
 
 Send logs to Amazon Cloudwatch using Winston.
+
+This is a fork of [lazywithclass/winston-cloudwatch](https://github.com/lazywithclass/winston-cloudwatch).
 
 ## Installing
 
 ```sh
-$ npm install --save winston winston-cloudwatch
+$ npm install --save winston deedw/winston-cloudwatch
 ```
 
 ## Configuring
 
-You can pass in a pre-configured AWS.CloudWatch object or rely on the module to create and configure the CloudWatch connection.
+You can pass in a pre-configured AWS.CloudWatchLogs object or rely on the module to create and configure the CloudWatchLogs connection.
 
 AWS configuration works using `~/.aws/credentials` as written in [AWS JavaScript SDK guide](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html#Setting_AWS_Credentials).
 

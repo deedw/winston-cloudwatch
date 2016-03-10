@@ -1,3 +1,6 @@
+### 0.11.2
+Stop polling of CloudWatch Logs service when no log events in queue
+
 ### 0.11.1
 Update options to allow standard Winston Transport options (e.g. handleExceptions)
 Rename jsonMessage option to Winston standard json

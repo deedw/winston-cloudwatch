@@ -1,6 +1,6 @@
 {
   "name": "winston-cloudwatch",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Send logs to Amazon Cloudwatch using Winston.",
   "keywords": [
     "amazon",
@@ -14,8 +14,8 @@
     "test": "make test",
     "dev": "make -s"
   },
-  "repository": "https://github.com/lazywithclass/winston-cloudwatch",
-  "author": "me@lazywithclass.com",
+  "repository": "https://github.com/deedw/winston-cloudwatch",
+  "author": "dev@davidwillis.co.uk",
   "license": "MIT",
   "peerDependencies": {
     "winston": "^2.0.0"
