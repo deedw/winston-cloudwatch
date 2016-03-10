@@ -12,12 +12,14 @@ $ npm install --save winston winston-cloudwatch
 
 ## Configuring
 
+You can pass in a pre-configured AWS.CloudWatch object or rely on the module to create and configure the CloudWatch connection.
+
 AWS configuration works using `~/.aws/credentials` as written in [AWS JavaScript SDK guide](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html#Setting_AWS_Credentials).
 
 As specified [in the docs](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html#Setting_the_Region)
 
  > The AWS SDK for Node.js doesn't select the region by default.
- 
+
 so you should take care of that. See the examples below.
 
 If either the group or the stream do not exist they will be created for you.
@@ -45,10 +47,12 @@ This is the list of options you could pass as argument to `winston.add`:
  * level - defaults to `info`
  * logGroupName
  * logStreamName
- * awsAccessKeyId
- * awsSecretKey
- * awsRegion
- * jsonMessage - `boolean`, format the message as JSON
+ * cloudwatch - preconfigured cloudwatch object. Optional
+ * awsAccessKeyId - ignored if cloudwatch object provided
+ * awsSecretKey - ignored if cloudwatch object provided
+ * awsRegion - ignored if cloudwatch object provided
+ * json - `boolean`, format the message as JSON. Defaults to true
+ * timestamp - `boolean`, include timestamp in log entry. Defaults to true
  * proxyServer
 
 AWS keys are usually picked by aws-sdk so you don't have to specify them, I provided the option just in case. Remember that `awsRegion` should still be set if you're using IAM roles.

@@ -1,3 +1,9 @@
+### 0.11.0
+Update options to allow standard Winston Transport options (e.g. handleExceptions)
+Rename jsonMessage option to Winston standard json
+Timestamps enabled by default but can be disabled in options
+Allow pre-configured Cloudwatch object to be passed in options
+
 ### 0.10.1
 
 Included timestamp in json logs
