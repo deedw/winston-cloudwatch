@@ -53,7 +53,6 @@ This is the list of options you could pass as argument to `winston.add`:
  * awsRegion - ignored if cloudwatchlogs object provided
  * json - `boolean`, format the message as JSON. Defaults to true
  * timestamp - `boolean`, include timestamp in log entry. Defaults to true
- * proxyServer
 
 AWS keys are usually picked by aws-sdk so you don't have to specify them, I provided the option just in case. Remember that `awsRegion` should still be set if you're using IAM roles.
 

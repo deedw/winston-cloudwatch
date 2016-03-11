@@ -1,3 +1,6 @@
+### 0.12.0
+Remove inbuilt proxy support and proxy-agent dependency. Pass in CloudWatchLogs object with proxy support pre-configured if required.
+
 ### 0.11.2
 Stop polling of CloudWatch Logs service when no log events in queue
 
