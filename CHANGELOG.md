@@ -1,3 +1,6 @@
+### 0.12.1
+Fixed log upload errors
+
 ### 0.12.0
 Remove inbuilt proxy support and proxy-agent dependency. Pass in CloudWatchLogs object with proxy support pre-configured if required.
 
