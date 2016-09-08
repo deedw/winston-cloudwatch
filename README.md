@@ -1,7 +1,4 @@
-# winston-cloudwatch [v1.5.0](https://github.com/lazywithclass/winston-cloudwatch/blob/master/CHANGELOG.md#150)
-
-[![Build Status](https://travis-ci.org/lazywithclass/winston-cloudwatch.svg?branch=master)](https://travis-ci.org/lazywithclass/winston-cloudwatch) [![Coverage Status](https://coveralls.io/repos/github/lazywithclass/winston-cloudwatch/badge.svg?branch=master)](https://coveralls.io/github/lazywithclass/winston-cloudwatch?branch=master) [![Dependency Status](https://david-dm.org/lazywithclass/winston-cloudwatch.svg)](https://david-dm.org/lazywithclass/winston-cloudwatch) [![dev dependencies](https://david-dm.org/lazywithclass/winston-cloudwatch/dev-status.svg)](https://david-dm.org/lazywithclass/winston-cloudwatch#info=devDependencies) [![peer dependencies](https://david-dm.org/lazywithclass/winston-cloudwatch/peer-status.svg)](https://david-dm.org/lazywithclass/winston-cloudwatch#info=peerDependencies)
-==================
+# winston-cloudwatch [v1.5.1](https://github.com/deedw/winston-cloudwatch/blob/master/CHANGELOG.md#150)
 
 Send logs to Amazon Cloudwatch using Winston.
 
@@ -28,7 +25,7 @@ Send logs to Amazon Cloudwatch using Winston.
 ### Installing
 
 ```sh
-$ npm install --save winston winston-cloudwatch
+$ npm install --save deedw/winston winston-cloudwatch
 ```
 
 ### Configuring
@@ -62,7 +59,7 @@ winston.add(WinstonCloudWatch, {
 winston.error('1');
 ```
 
-You could also log to multiple streams with / without different log levels, have a look at [this example](https://github.com/lazywithclass/winston-cloudwatch/blob/master/examples/multiple-loggers.js).
+You could also log to multiple streams with / without different log levels, have a look at [this example](https://github.com/deedw/winston-cloudwatch/blob/master/examples/multiple-loggers.js).
 
 ### Options
 
@@ -71,12 +68,14 @@ This is the list of options you could pass as argument to `winston.add`:
  * level - defaults to `info`
  * logGroupName
  * logStreamName
+ * cloudwatchlogs - `object`, pre-configured AWS CloudWatchLogs object. If provided then awsAccessKeyId, awsSecretKey, awsRegion, awsOptions & proxyServer are ignored
  * awsAccessKeyId
  * awsSecretKey
  * awsRegion
  * awsOptions - `object`, params as per [docs](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/CloudWatchLogs.html#constructor-property), values in `awsOptions` are overridden by any other if specified, run [this example](https://github.com/lazywithclass/winston-cloudwatch/blob/master/examples/simple-with-aws-options.js) to have a look
- * jsonMessage - `boolean`, format the message as JSON
- * messageFormatter - `function`, format the message the way you like. This function will receive a `log` object that has the following properties: `level`, `msg`, and `meta`, which are passed by winston to the `log` function (see [CustomLogger.prototype.log as an example](https://github.com/winstonjs/winston#adding-custom-transports))
+ * timestamp - `boolean`, include a timestamp in the log message. Defaults to `true`
+ * json - `boolean`, format the message as JSON
+ * messageFormatter - `function`, format the message the way you like. This function will receive a `log` object that has the following properties: `level`, `msg`, and `meta`, which are passed by winston to the `log` function (see [CustomLogger.prototype.log as an example](https://github.com/winstonjs/winston#adding-custom-transports)). json should be false for this option to work.
  * proxyServer - `String`, use `proxyServer` as proxy in httpOptions
  * uploadRate - `Number`, how often logs have to be sent to AWS. Be careful of not hitting [AWS CloudWatch Logs limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html), the default is 2000ms.
  * errorHandler - `function`, invoked with an error object, if not provided the error is sent to `console.error`
@@ -85,6 +84,6 @@ AWS keys are usually picked by aws-sdk so you don't have to specify them, I prov
 
 ### Examples
 
-Please refer to [the provided examples](https://github.com/lazywithclass/winston-cloudwatch/blob/master/examples) for more hints.
+Please refer to [the provided examples](https://github.com/deedw/winston-cloudwatch/blob/master/examples) for more hints.
 
 Note that when running the examples the process will not exit because of the [`setInterval`](https://github.com/lazywithclass/winston-cloudwatch/blob/master/index.js#L73)

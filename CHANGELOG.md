@@ -1,3 +1,10 @@
+### 1.5.1
+
+Allow standard Winston json option in place of jsonMessage
+Timestamps enabled by default but can be disabled in options
+Allow pre-configured CloudWatchLogs object to be passed in options
+Fixed bug that allowed concurrent calls to getToken
+
 ### 1.5.0
 
 Fixes a bug when under heavy load and and adds batching and truncating features (thanks @npahucki)
