@@ -1,10 +1,9 @@
 {
   "name": "winston-cloudwatch",
-  "version": "0.12.1",
+  "version": "1.5.0",
   "description": "Send logs to Amazon Cloudwatch using Winston.",
   "keywords": [
     "amazon",
-    "aws",
     "cloudwatch",
     "winston",
     "logging",
@@ -13,24 +12,29 @@
   "main": "index.js",
   "scripts": {
     "test": "make test",
-    "dev": "make -s"
+    "coveralls": "./node_modules/.bin/coveralls <./coverage/lcov.info",
+    "update-dependencies": "./node_modules/.bin/npm-check-updates -ua && npm install"
   },
-  "repository": "https://github.com/deedw/winston-cloudwatch",
-  "author": "dev@davidwillis.co.uk",
+  "repository": "https://github.com/lazywithclass/winston-cloudwatch",
+  "author": "me@lazywithclass.com",
   "license": "MIT",
   "peerDependencies": {
-    "winston": "^2.0.0"
+    "winston": "^2.1.1"
   },
   "dependencies": {
-    "aws-sdk": "^2.2.43",
-    "lodash": "^4.6.1"
+    "async": "^2.0.0-rc.6",
+    "aws-sdk": "^2.4.0",
+    "lodash": "^4.13.1",
+    "proxy-agent": "^2.0.0"
   },
   "devDependencies": {
     "clarify": "^1.0.5",
-    "coffee-script": "^1.7.1",
-    "mocha": "^2.3.3",
-    "should": "^8.2.2",
-    "sinon": "^1.12.1",
-    "testem": "^1.3.0"
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
+    "mockery": "^1.7.0",
+    "npm-check-updates": "^2.6.7",
+    "should": "^9.0.2",
+    "sinon": "^1.17.4"
   }
 }

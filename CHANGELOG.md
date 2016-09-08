@@ -1,21 +1,41 @@
-### 0.12.1
-Fixed log upload errors
+### 1.5.0
 
-### 0.12.0
-Remove inbuilt proxy support and proxy-agent dependency. Pass in CloudWatchLogs object with proxy support pre-configured if required.
+Fixes a bug when under heavy load and and adds batching and truncating features (thanks @npahucki)
 
-### 0.11.2
-Stop polling of CloudWatch Logs service when no log events in queue
+### 1.4.0
 
-### 0.11.1
-Update options to allow standard Winston Transport options (e.g. handleExceptions)
-Rename jsonMessage option to Winston standard json
-Timestamps enabled by default but can be disabled in options
-Allow pre-configured CloudWatchLogs object to be passed in options
+accepts `awsOptions` in the constructor and configures AWS accordingly
 
-### 0.10.1
+### 1.3.2
 
-Included timestamp in json logs
+using `logStreamNamePrefix` in `getStream`
+
+### 1.3.1
+
+added `npm run update-dependencies` to automatically update all deps in package.json and node_modules
+
+### 1.3.0
+
+Added messageFormatter to format the log
+
+### 1.2.0
+
+Added error handler
+
+### 1.1.0
+
+Fixed typo in jsonMessage. Introduced testing for index.js
+
+### 1.0.1
+
+Update dependencies
+
+### 1.0.0
+
+Almost a complete rewrite. Not compatible with previous versions.
+It's now possible to log to multiple streams and to have different
+log levels.
+100% test covered the lib layer.
 
 ### 0.10.0
 
@@ -85,4 +105,3 @@ Work around to the AWS time limit for sending events.
 ### 0.1.1
 
 First release
-

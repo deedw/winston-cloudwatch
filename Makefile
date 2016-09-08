@@ -1,7 +1,7 @@
-testem:
-	./node_modules/.bin/testem
+dev:
+	./node_modules/.bin/mocha test --recursive --require should -w
 
 test:
-	./node_modules/.bin/mocha --compilers coffee:coffee-script/register --reporter spec test/main.coffee
+	./node_modules/.bin/istanbul cover _mocha test -- --recursive --require should -R spec
 
 .PHONY: test
