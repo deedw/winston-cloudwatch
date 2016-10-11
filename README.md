@@ -1,4 +1,4 @@
-# winston-cloudwatch [v1.5.1](https://github.com/deedw/winston-cloudwatch/blob/master/CHANGELOG.md#150)
+# winston-cloudwatch [v1.5.2](https://github.com/deedw/winston-cloudwatch/blob/master/CHANGELOG.md#150)
 
 Send logs to Amazon Cloudwatch using Winston.
 
@@ -76,7 +76,7 @@ This is the list of options you could pass as argument to `winston.add`:
  * timestamp - `boolean`, include a timestamp in the log message. Defaults to `true`
  * json - `boolean`, format the message as JSON
  * messageFormatter - `function`, format the message the way you like. This function will receive a `log` object that has the following properties: `level`, `msg`, and `meta`, which are passed by winston to the `log` function (see [CustomLogger.prototype.log as an example](https://github.com/winstonjs/winston#adding-custom-transports)). json should be false for this option to work.
- * proxyServer - `String`, use `proxyServer` as proxy in httpOptions
+ * proxyServer - `String`, use `proxyServer` as proxy in httpOptions. If using this, you will need to add "proxy-agent" (v2.0.0) to your application dependencies
  * uploadRate - `Number`, how often logs have to be sent to AWS. Be careful of not hitting [AWS CloudWatch Logs limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html), the default is 2000ms.
  * errorHandler - `function`, invoked with an error object, if not provided the error is sent to `console.error`
 
